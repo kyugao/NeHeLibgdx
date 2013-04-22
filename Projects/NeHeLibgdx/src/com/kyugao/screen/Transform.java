@@ -50,24 +50,20 @@ public class Transform implements Screen {
 		squareMesh = new Mesh(true, 4, 4, new VertexAttribute(Usage.Position,
 				3, "b_position"), new VertexAttribute(Usage.ColorPacked, 4,
 				"b_color"));
-		triangleMesh.setVertices(new float[] { //
-				-1.5f, 1.0f, -6.0f, // point 1
-						Color.toFloatBits(1f, 0f, 0f, 1f), // color 1
-						-2.5f, -1.0f, -6.0f, // point 2
-						Color.toFloatBits(0f, 1f, 0f, 1f), // color 2
-						-0.5f, -1.0f, -6.0f,// point 3
-						Color.toFloatBits(0f, 0f, 1f, 1f) // color 3
+		triangleMesh.setVertices(new float[] {
+				//
+				-1.5f, 1.0f, -6.0f, Color.toFloatBits(1f, 0f, 0f, 1f), // point-1
+				-2.5f, -1.0f, -6.0f, Color.toFloatBits(0f, 1f, 0f, 1f), // point-2
+				-0.5f, -1.0f, -6.0f, Color.toFloatBits(0f, 0f, 1f, 1f) // point-3
 				});
 		triangleMesh.setIndices(new short[] { 0, 1, 2 });
 
-		squareMesh.setVertices(new float[] { 0.5f, -1.0f, -6.0f,// point BL
-				Color.toFloatBits(0.5f, 0.5f, 1f, 1f), // color 1
-				2.5f, -1.0f, -6.0f,// point BR
-				Color.toFloatBits(0.5f, 0.5f, 1f, 1f), // color 1
-				0.5f, 1.0f, -6.0f, // point TL
-				Color.toFloatBits(0.5f, 0.5f, 1f, 1f), // color 1
-				2.5f, 1.0f, -6.0f, // point TR
-				Color.toFloatBits(0.5f, 0.5f, 1f, 1f) // color 1
+		squareMesh.setVertices(new float[] {
+				//
+				0.5f, -1.0f, -6.0f, Color.toFloatBits(0.5f, 0.5f, 1f, 1f), // POINT-1
+				2.5f, -1.0f, -6.0f, Color.toFloatBits(0.5f, 0.5f, 1f, 1f), // POINT-2
+				0.5f, 1.0f, -6.0f, Color.toFloatBits(0.5f, 0.5f, 1f, 1f), // POINT-3
+				2.5f, 1.0f, -6.0f, Color.toFloatBits(0.5f, 0.5f, 1f, 1f) // POINT-4
 				});
 		squareMesh.setIndices(new short[] { 0, 1, 2, 3 });
 	}
