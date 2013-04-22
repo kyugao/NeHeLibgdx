@@ -40,7 +40,7 @@ public class TDShapes implements Screen {
 		Gdx.gl10.glRotatef(rquad, 1.0f, 1.0f, 1.0f);
 		Gdx.gl10.glTranslatef(-1.5f, 0.0f, 7.0f);
 		for (int i = 0; i < squareMesh.getMaxVertices() / 4; i ++) {
-			squareMesh.render(GL10.GL_TRIANGLE_FAN, i * 4, 4);
+			squareMesh.render(GL10.GL_TRIANGLE_FAN, i * 4, 4); // 正方形的6个面分别画出.
 		}
 		return true;
 	}
