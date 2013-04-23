@@ -24,7 +24,6 @@ public class FilterLightingKeyboard implements Screen, InputProcessor {
 
 	// indicator for controlling the light
 	private boolean light;
-	private boolean lp, fp;
 	private float z = -5.0f;
 
 	// Ambient Light
@@ -149,28 +148,29 @@ public class FilterLightingKeyboard implements Screen, InputProcessor {
 
 	@Override
 	public boolean keyDown(int keycode) {
-		if (keycode == Input.Keys.L && !lp) {
-			lp = true;
+		if (keycode == Input.Keys.L) {
 			light = !light;
 			if (light) {
 				Gdx.gl.glEnable(GL10.GL_LIGHTING);
 			} else {
 				Gdx.gl.glDisable(GL10.GL_LIGHTING);
 			}
-		} else if (keycode == Input.Keys.F && !fp) {
-			fp = true;
+		} else if (keycode == Input.Keys.F) {
 			filter = (filter + 1) % 3;
+		} else if (keycode == Input.Keys.DOWN) {
+			xspeed += 1f;
+		} else if (keycode == Input.Keys.UP) {
+			xspeed -= 1f;
+		} else if (keycode == Input.Keys.LEFT) {
+			yspeed -= 1f;
+		} else if (keycode == Input.Keys.RIGHT) {
+			yspeed += 1f;
 		}
 		return false;
 	}
 
 	@Override
 	public boolean keyUp(int keycode) {
-		if (keycode == Input.Keys.L && lp) {
-			lp = false;
-		} else if (keycode == Input.Keys.F && fp) {
-			fp = false;
-		}
 		return false;
 	}
 
