@@ -2,7 +2,7 @@ package com.kyugao.nehe;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.FPSLogger;
-import com.kyugao.screen.FilterLightingKeyboard;
+import com.kyugao.screen.Blend;
 
 public class NeHeLibgdx extends Game {
 
@@ -11,7 +11,7 @@ public class NeHeLibgdx extends Game {
 	@Override
 	public void create() {
 		// TODO Auto-generated method stub
-		setScreen(new FilterLightingKeyboard());
+		setScreen(new Blend());
 		fpsLogger = new FPSLogger();
 	}
 
